@@ -3,7 +3,7 @@ const categoryController = {
     
     addCategory: async function(req, res){
         try{
-            if(req.role == 'User'){
+            if(req.role == 'Publisher'){
                 return res.send({
                     status:403,
                     info:'Unauthorized'
@@ -85,7 +85,7 @@ const categoryController = {
 
     deleteCategory: async function(req, res){
         try{
-            if(req.role == 'User'){
+            if(req.role == 'Publisher'){
                 return res.send({
                     status:403,
                     info:'Unauthorized'
